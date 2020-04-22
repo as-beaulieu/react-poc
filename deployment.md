@@ -26,6 +26,11 @@ insert as "engines" in package.json
 }
 ```
 
+### Procfile
+
+The Procfile is always a simple text file that is named Procfile without a file extension. 
+For example, Procfile.txt is not valid.
+
 ### Create Heroku Git Repository
 
 `heroku --version`
