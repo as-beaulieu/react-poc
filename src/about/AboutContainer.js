@@ -1,12 +1,12 @@
 import React from 'react'
-import Container from "react-bootstrap/Container";
+import {Container, Jumbotron} from "react-bootstrap";
 
 class AboutContainer extends React.Component{
     render() {
         return (
-            <Container className={"about-container"}>
-                <div className={"card"}>
-                    <div className={"card-body"}>
+            <div className={"about-container"}>
+                <Jumbotron fluid>
+                    <Container className={"card-body"}>
                         <h2>ABOUT</h2>
                         <p>Current projects I'm working on or have finished</p>
                         <b>TODO</b>
@@ -31,8 +31,8 @@ class AboutContainer extends React.Component{
                                 <p>Playing with a table of all users to edit and change permissions</p>
                             </li>
                         </ul>
-                    </div>
-                </div>
+                    </Container>
+                </Jumbotron>
                 <div className={"card"}>
                     <div className={"card-body"}>
                         <h2>Contact us</h2>
@@ -76,7 +76,7 @@ class AboutContainer extends React.Component{
                         </ol>
                     </div>
                 </div>
-            </Container>
+            </div>
         )
     }
 }
