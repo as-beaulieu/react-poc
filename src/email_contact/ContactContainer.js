@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container} from "react-bootstrap";
+import EmailForm from "./EmailForm";
 
 class ContactContainer extends React.Component {
 
@@ -18,6 +19,7 @@ class ContactContainer extends React.Component {
                         <button type="button" className="btn btn-secondary">Secondary</button>
                     </div>
                 </div>
+                <EmailForm />
             </Container>
         )
     }
