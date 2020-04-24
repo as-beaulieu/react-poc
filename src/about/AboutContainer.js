@@ -1,5 +1,7 @@
 import React from 'react'
-import {Container, Jumbotron} from "react-bootstrap";
+import {Col, Container, Jumbotron} from "react-bootstrap";
+import AboutItem from "./AboutItem";
+import Row from "react-bootstrap/Row";
 
 class AboutContainer extends React.Component{
     render() {
@@ -33,49 +35,55 @@ class AboutContainer extends React.Component{
                         </ul>
                     </Container>
                 </Jumbotron>
-                <div className={"card"}>
-                    <div className={"card-body"}>
-                        <h2>Contact us</h2>
-                        <p>A library to play with form fields, and email contact. </p>
-                        <b>In Progress</b>
-                        <ol>
-                            <li>Will save information provided in form</li>
-                            <li>Will send email containing information provided in form</li>
-                        </ol>
-                    </div>
-                </div>
-                <div className={"card"}>
-                    <div className={"card-body"}>
-                        <h2>Graphs and charts</h2>
-                        <p>A library to play with graphs, charts, and visual representation of data</p>
-                        <b>In Progress</b>
-                        <ol>
-                            <li>Graph will display more titles and legend of displayed data</li>
-                            <li>A dynamic graph that will take data from a form body</li>
-                        </ol>
-                    </div>
-                </div>
-                <div className={"card"}>
-                    <div className={"card-body"}>
-                        <h2>PDF Export</h2>
-                        <p>A library to play with saving data in the form of a pdf</p>
-                        <b>In Progress</b>
-                        <ol>
-                            <li>Provide better styles to show data in an invoice like form</li>
-                        </ol>
-                    </div>
-                </div>
-                <div className={"card"}>
-                    <div className={"card-body"}>
-                        <h2>API Heartbeats</h2>
-                        <p>A library to play with axios api calls to microservices</p>
-                        <b>In Progress</b>
-                        <ol>
-                            <li>Connect with a statically assigned api to display heartbeat info when called</li>
-                            <li>take in a list provided by environment and use list to call microservices heartbeats dynamically</li>
-                        </ol>
-                    </div>
-                </div>
+                <Container fluid>
+                    <Row className={"about-row"}>
+                        <Col>
+                            <AboutItem
+                                Title={"Contact us"}
+                                Description={"A library to play with form fields, and email contact."}
+                                Route={"/contact"}
+                                ToDoItems={[
+                                    "Will save information provided in form",
+                                    "Will send email containing information provided in form"
+                                ]}/>
+                        </Col>
+                    </Row>
+                    <Row className={"about-row"}>
+                        <Col>
+                            <AboutItem
+                                Title={"Graphs and charts"}
+                                Description={"A library to play with graphs, charts, and visual representation of data"}
+                                Route={"/graphs"}
+                                ToDoItems={[
+                                    "Graph will display more titles and legend of displayed data",
+                                    "A dynamic graph that will take data from a form body"
+                                ]}/>
+                        </Col>
+                    </Row>
+                    <Row className={"about-row"}>
+                        <Col>
+                            <AboutItem
+                                Title={"PDF Export"}
+                                Description={"A library to play with saving data in the form of a pdf"}
+                                Route={"/pdf"}
+                                ToDoItems={[
+                                    "Provide better styles to show data in an invoice like form"
+                                ]}/>
+                        </Col>
+                    </Row>
+                    <Row className={"about-row"}>
+                        <Col>
+                            <AboutItem
+                                Title={"API Heartbeats"}
+                                Description={"A library to play with axios api calls to microservices"}
+                                Route={"/heartbeats"}
+                                ToDoItems={[
+                                    "Connect with a statically assigned api to display heartbeat info when called",
+                                    "take in a list provided by environment and use list to call microservices heartbeats dynamically"
+                                ]}/>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }
