@@ -24,6 +24,7 @@ function Header () {
                         <NavDropdown.Item href="/pdf">PDF Export</NavDropdown.Item>
                         <NavDropdown.Item href="/heartbeats">API Heartbeats</NavDropdown.Item>
                         <NavDropdown.Item href="/">API Call</NavDropdown.Item>
+                        <NavDropdown.Item href="/inventory">Inventory</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 <Form inline>
