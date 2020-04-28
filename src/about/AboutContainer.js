@@ -44,6 +44,7 @@ class AboutContainer extends React.Component{
                                 Route={"/contact"}
                                 ToDoItems={[
                                     "Will save information provided in form",
+                                    "Use a modal to confirm sending of email with preview",
                                     "Will send email containing information provided in form"
                                 ]}/>
                         </Col>
@@ -80,6 +81,22 @@ class AboutContainer extends React.Component{
                                 ToDoItems={[
                                     "Connect with a statically assigned api to display heartbeat info when called",
                                     "take in a list provided by environment and use list to call microservices heartbeats dynamically"
+                                ]}/>
+                        </Col>
+                    </Row>
+                    <Row className={"about-row"}>
+                        <Col>
+                            <AboutItem
+                                Title={"Inventory"}
+                                Description={"A library to play with a database for an inventory system"}
+                                Route={"/inventory"}
+                                ToDoItems={[
+                                    "Create a table to hold information about products",
+                                    "provide user inputs to create new items for the inventory",
+                                    "Make the inventory table sortable by category",
+                                    "Create a search to be able to search the list by criteria",
+                                    "Create a barcode or QR scan to add item by scanned data",
+                                    "connect through api/dao to persist data"
                                 ]}/>
                         </Col>
                     </Row>
