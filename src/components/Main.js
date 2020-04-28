@@ -7,6 +7,7 @@ import GraphContainer from "../graphs/GraphContainer";
 import PdfExportContainer from "../pdf_export/PdfExportContainer";
 import ContactContainer from "../email_contact/ContactContainer";
 import {Switch} from "react-router-dom";
+import InventoryContainer from "../inventory/InventoryContainer";
 
 const Main = () => (
     <main>
@@ -16,6 +17,7 @@ const Main = () => (
             <Route exact path="/graphs" component={GraphContainer} />
             <Route path="/pdf" component={PdfExportContainer} />
             <Route path="/contact" component={ContactContainer} />
+            <Route path="/inventory" component={InventoryContainer} />
             <Route component={Notfound} /> {/* a <Route /> with no path will always be rendered */}
         </Switch>
     </main>
