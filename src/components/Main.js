@@ -8,11 +8,13 @@ import PdfExportContainer from "../pdf_export/PdfExportContainer";
 import ContactContainer from "../email_contact/ContactContainer";
 import {Switch} from "react-router-dom";
 import InventoryContainer from "../inventory/InventoryContainer";
+import HomeContainer from "../home/HomeContainer";
 
 const Main = () => (
     <main>
         <Switch> {/*Now all children and children of children, can access redux 'itemsStore'*/}
-            <Route exact path="/" component={AboutContainer}/>
+            <Route exact path="/" component={HomeContainer}/>
+            <Route exact path="/about" component={AboutContainer}/>
             <Route exact path="/heartbeats" component={HeartbeatContainer} />
             <Route exact path="/graphs" component={GraphContainer} />
             <Route path="/pdf" component={PdfExportContainer} />
