@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button} from "react-bootstrap";
+import {Button, ProgressBar} from "react-bootstrap";
 import './about.css'
 
 class AboutItem extends React.Component {
@@ -7,11 +7,18 @@ class AboutItem extends React.Component {
         <li key={item}>{item}</li>
     )
 
+
+
     render() {
+        const finished = this.props.FinishedItems ? this.props.FinishedItems.length : 0
+        const todo = this.props.ToDoItems ? this.props.ToDoItems.length : 1
+        const prog = (finished / todo) * 100
+
         return(
             <div className={"card"}>
                 <div className={"card-body"}>
                     <h2>{this.props.Title}</h2>
+                    <ProgressBar now={prog} />
                     <Button
                         variant="primary"
                         className={"link-button"}

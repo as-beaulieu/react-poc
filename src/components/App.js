@@ -7,7 +7,9 @@ import Header from "./Header";
 const App = () => (
   <div>
     <Header/>
-    <Main />
+    <div className={"components"}>
+        <Main />
+    </div>
   </div>
 )
 

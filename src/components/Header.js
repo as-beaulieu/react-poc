@@ -8,14 +8,14 @@ import Button from "react-bootstrap/Button";
 
 function Header () {
     return(
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" fixed="top" expand="lg" className={"poc-navbar"}>
             <Navbar.Brand href="#home">POC React</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <NavDropdown title="Navigation" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/">About</NavDropdown.Item>
+                        <NavDropdown.Item href="/about">About</NavDropdown.Item>
                         <NavDropdown.Item href="/contact">Contact Us</NavDropdown.Item>
                         <NavDropdown.Item href={"/graphs"}>Graphs and Charts</NavDropdown.Item>
                         <NavDropdown.Divider />
