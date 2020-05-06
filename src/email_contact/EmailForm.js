@@ -46,7 +46,7 @@ class EmailForm extends React.Component {
 
     sendFeedback (templateId, variables) {
         window.emailjs.send(
-            'mailjet',
+            process.env.EMAIL_CLIENT,
             templateId,
             variables
         ).then(res => {
