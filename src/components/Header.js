@@ -8,7 +8,7 @@ import Button from "react-bootstrap/Button";
 
 function Header () {
     return(
-        <Navbar bg="light" fixed="top" expand="lg" className={"poc-navbar"}>
+        <Navbar bg="light" fixed="top" expand="lg">
             <Navbar.Brand href="#home">POC React</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
