@@ -34,7 +34,7 @@ class EmailForm extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const templateIdEnv = process.env.EMAIL_TEMPLATE_ID
+        const templateIdEnv = process.env.REACT_APP_EMAIL_TEMPLATE_ID
 
         this.sendFeedback(templateIdEnv,
             {
@@ -46,7 +46,7 @@ class EmailForm extends React.Component {
 
     sendFeedback (templateId, variables) {
         window.emailjs.send(
-            process.env.EMAIL_CLIENT,
+            process.env.REACT_APP_EMAIL_CLIENT,
             templateId,
             variables
         ).then(res => {
